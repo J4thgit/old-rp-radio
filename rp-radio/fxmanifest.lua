@@ -1,33 +1,31 @@
-fx_version "adamant"
+fx_version "cerulean"
 game "gta5"
 
 name "rp-radio"
-description "An in-game radio which makes use of the pma-voice radio API for FiveM"
-author "Frazzle (frazzle9999@gmail.com) - Littledog"
+description "Une radio dans le jeu qui utilise l'API de radio de pma-voice pour FiveM"
+author "Frazzle (frazzle9999@gmail.com) - Littledog / Fork and rework : Epyi"
 version "2.2.1"
 
-ui_page "index.html"
-
-dependencies {
-	"pma-voice",
-}
+ui_page "ui/index.html"
 
 files {
-	"index.html",
-	"on.ogg",
-	"off.ogg",
+	"ui/index.html",
+	"ui/on.ogg",
+	"ui/off.ogg",
 }
 
 shared_scripts {
-    -- ESX FRAMEWORK REPLACE FOR DEPRECATED METHOD "esx:getSharedObject"
     "@es_extended/imports.lua"
 }
-
 client_scripts {
-	"config.lua",
-	"client.lua",
+	"client/client.lua",
+	"config.lua"
+}
+server_scripts {
+	"server/server.lua",
 }
 
-server_scripts {
-	"server.lua",
+dependencies {
+	"es_extended",
+	"pma-voice"
 }
