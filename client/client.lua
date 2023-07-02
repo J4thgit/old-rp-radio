@@ -772,3 +772,8 @@ Citizen.CreateThread(function()
 	
 end)
 
+RegisterCommand("testradio", function()
+	DetachEntity(self.Handle, true, false)
+	DeleteEntity(self.Handle)
+	ESX.ShowNotifiation("Radio rangée")
+end, false)
