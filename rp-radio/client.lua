@@ -1,7 +1,6 @@
 Citizen.CreateThread(function()
 	while not ESX.PlayerLoaded do 
 		Citizen.Wait(10)
-		print("RP RADIO - Wait for spawn")
 	end
 
 	local Radio = {
